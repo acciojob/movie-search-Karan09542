@@ -8,7 +8,6 @@ const SearchMovie = () => {
         fetch(`http://www.omdbapi.com/?apikey=99eb9fd1&s=${search}`)
         .then(res => res.json())
         .then(data => {
-            console.log(data)
             if(data.Response === "False"){
                 setError("Invalid movie name. Please try again.")
             }else {
@@ -38,8 +37,8 @@ const SearchMovie = () => {
                     <img src={movie.Poster} alt="moive-image"/>
                 </li>
             ))}
+            {error && <p class="error">{error}</p>}
         </ul>
-        <p class="error">{error}</p>
     </div>
   )
 }
