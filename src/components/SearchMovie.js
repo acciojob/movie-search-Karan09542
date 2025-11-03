@@ -37,7 +37,7 @@ const SearchMovie = () => {
                     <img src={movie.Poster} alt="moive-image"/>
                 </li>
             ))}
-            {error && <p class="error">{error}</p>}
+            {error && <p className="error">{error}</p>}
         </ul>
     </div>
   )
