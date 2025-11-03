@@ -39,7 +39,7 @@ const SearchMovie = () => {
                 </li>
             ))}
         </ul>
-        {error && <p style={{color: "red"}}>Movie not found</p>}
+        {error && <p class="error">Invalid movie name. Please try again.</p>}
     </div>
   )
 }
