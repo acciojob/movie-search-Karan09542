@@ -10,14 +10,14 @@ const SearchMovie = () => {
         .then(data => {
             console.log(data)
             if(data.Response === "False"){
-                setError(data.Error)
+                setError("Invalid movie name. Please try again.")
             }else {
                 setError("")
                 setMovies(data.Search)
             }
         })
         .catch(err => {
-            setError("Movie not Found")
+            setError("Invalid movie name. Please try again.")
             setMovies([])
             console.error(err)
         })
@@ -39,7 +39,7 @@ const SearchMovie = () => {
                 </li>
             ))}
         </ul>
-        {error && <p class="error">Invalid movie name. Please try again.</p>}
+        <p class="error">{error}</p>
     </div>
   )
 }
