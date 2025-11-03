@@ -24,12 +24,12 @@ const SearchMovie = () => {
 
   return (
     <div>
-        <div>
+        <form>
             <label htmlFor="search">Search Movie</label>
             <br />
             <input onChange={(e) => setSearch(e.target.value)} type="text" id="search" placeholder='Search'/>
-            <button onClick={handleSearchMovie}>Search</button>
-        </div>
+            <button type="button" onClick={handleSearchMovie}>Search</button>
+        </form>
         <ul>
             {movies.map((movie, i) => (
                 <li key={movie.imdbID + `-${i}`}>
