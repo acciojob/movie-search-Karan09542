@@ -29,7 +29,7 @@ const SearchMovie = () => {
             <label htmlFor="search">Search Movie</label>
             <br />
             <input onChange={(e) => setSearch(e.target.value)} type="text" id="search" placeholder='Search'/>
-            <button onClick={handleSearchMovie}>search</button>
+            <button onClick={handleSearchMovie}>Search</button>
         </div>
         <ul>
             {movies.map((movie, i) => (
